@@ -1,0 +1,211 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+// / Imports
+
+// Variables
+$base: 4px;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$accentColor: #FF7235;
+
+$transition: 200ms;
+// / Variables
+
+// Mixins
+@mixin focusVisible() {
+   outline: 2px solid $accentColor;
+   border-radius: 5px;
+}
+
+// / Mixins
+
+// Common styles
+* {
+   margin: 0;
+   padding: 0;
+
+   box-sizing: border-box;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+button {
+   border: none;
+   background-color: transparent;
+}
+
+body {
+   font-family: 'Hind Siliguri', serif;
+}
+
+h1 {
+   margin: 0;
+
+   font-size: 96px;
+   font-weight: $fw-bold;
+   line-height: 100%;
+   color: #292830;
+}
+
+h3{
+   margin: 0;
+
+   font-size: 24px;
+   font-weight: $fw-regular;
+   line-height: 100%;
+   color: #BDBDBD;
+}
+
+.section-outer {
+
+}
+
+.section-inner {
+   max-width: $base * 275;
+
+   margin: 0 auto;
+}
+
+// / Common styles
+
+// Header styles
+.header {
+   padding-top: $base * 13;
+   padding-bottom: $base * 26;
+
+   .section-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.header-list {
+   display: flex;
+   align-items: center;
+
+   &__item {
+      &:not(:last-child) {
+         margin-right: $base * 10;
+      }
+   }
+
+   &__item-link {
+      font-weight: $fw-regular;
+      transition: $transition;
+
+      &:hover {
+         color: $accentColor;
+      }
+
+      &:focus-visible {
+         @include focusVisible();
+      }
+   }
+}
+
+.header-button {
+   width: $base * 40;
+   height: $base * 12;
+
+   border: 1px solid $accentColor;
+   border-radius: 8px;
+
+   font-weight: $fw-regular;
+   color: $accentColor;
+
+   transition: $transition;
+
+   cursor: pointer;
+
+   &:hover {
+      background-color: $accentColor;
+      color: #FFF;
+   }
+}
+
+// / Header styles
+
+// Hero styles
+.hero {
+   .section-inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.hero-title{
+   margin-bottom: $base * 5;
+}
+
+.hero-subtitle{
+   margin-bottom: $base * 10;
+}
+
+.hero-buttons-block{
+   display: flex;
+   align-items: center;
+}
+
+.hero-button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 225px;
+   height: 75px;
+
+   margin-right: $base * 6;
+
+   background-color: $accentColor;
+   border-radius: 8px;
+
+   font-size: 24px;
+   font-weight: $fw-regular;
+   color: #FFF;
+
+   cursor: pointer;
+
+   transition: color $transition;
+   transition: background-color $transition;
+
+   &:hover{
+      color: $accentColor;
+      background-color: #FFF;
+      border: 3px solid $accentColor;
+   }
+
+   &:focus-visible{
+      outline: 3px solid #000;
+   }
+
+   &__icon{
+      display: block;
+      width: 18px;
+      height: 10px;
+
+      margin-left: $base * 3;
+
+      background-image: url("../images/arrow-down.svg");
+      background-repeat: no-repeat;
+   }
+
+   &__text{
+      font-size: 24px;
+      font-weight: $fw-regular;
+      color: #BDBDBD;
+   }
+}
+// / Hero styles
