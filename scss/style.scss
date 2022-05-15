@@ -179,7 +179,7 @@ h3{
 
    cursor: pointer;
 
-   transition: color $transition background-color $transition;
+   transition: color $transition, background-color $transition;
 
    &:hover{
       color: $accentColor;
