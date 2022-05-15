@@ -139,6 +139,7 @@ h3{
 
 // Hero styles
 .hero {
+   padding-bottom: $base * 53;
    .section-inner{
       display: flex;
       justify-content: space-between;
@@ -178,8 +179,7 @@ h3{
 
    cursor: pointer;
 
-   transition: color $transition;
-   transition: background-color $transition;
+   transition: color $transition background-color $transition;
 
    &:hover{
       color: $accentColor;
@@ -209,3 +209,53 @@ h3{
    }
 }
 // / Hero styles
+
+// Product styles
+.product{
+   display: flex;
+   align-items: flex-end;
+   position: relative;
+
+   height: $base * 178;
+
+   background-color: #FF7235;
+
+   &__image{
+      position: relative;
+      top: 4px;
+
+      z-index: 1;
+   }
+}
+
+.product-blob-1{
+   position: absolute;
+
+   bottom: 0;
+   left: 0;
+}
+
+.product-blob-2{
+   position: absolute;
+
+   top: 0;
+   right: 0;
+}
+// / Product styles
+
+// Brands
+.brands-list{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   height: 188px;
+
+   &__item {
+      transition: $transition;
+   }
+   &__item:hover{
+      opacity: 0.5;
+   }
+}
+// / Brands
