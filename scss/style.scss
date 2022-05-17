@@ -58,12 +58,31 @@ h1 {
    color: #292830;
 }
 
-h3{
+h2 {
+   margin: 0;
+
+   font-size: 96px;
+   font-weight: $fw-bold;
+   line-height: 100%;
+   color: #292830;
+}
+
+h3 {
+   margin: 0;
+
+   font-size: 22px;
+   font-weight: $fw-regular;
+   line-height: 100%;
+   color: #BDBDBD;
+   text-transform: uppercase;
+}
+
+h4 {
    margin: 0;
 
    font-size: 24px;
    font-weight: $fw-regular;
-   line-height: 100%;
+   line-height: $base * 9;
    color: #BDBDBD;
 }
 
@@ -75,6 +94,10 @@ h3{
    max-width: $base * 275;
 
    margin: 0 auto;
+}
+
+.visually-hidden {
+   display: none;
 }
 
 // / Common styles
@@ -140,27 +163,28 @@ h3{
 // Hero styles
 .hero {
    padding-bottom: $base * 53;
-   .section-inner{
+
+   .section-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
    }
 }
 
-.hero-title{
+.hero-title {
    margin-bottom: $base * 5;
 }
 
-.hero-subtitle{
+.hero-subtitle {
    margin-bottom: $base * 10;
 }
 
-.hero-buttons-block{
+.hero-buttons-block {
    display: flex;
    align-items: center;
 }
 
-.hero-button{
+.hero-button {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -181,17 +205,17 @@ h3{
 
    transition: color $transition, background-color $transition;
 
-   &:hover{
+   &:hover {
       color: $accentColor;
       background-color: #FFF;
       border: 3px solid $accentColor;
    }
 
-   &:focus-visible{
+   &:focus-visible {
       outline: 3px solid #000;
    }
 
-   &__icon{
+   &__icon {
       display: block;
       width: 18px;
       height: 10px;
@@ -202,16 +226,17 @@ h3{
       background-repeat: no-repeat;
    }
 
-   &__text{
+   &__text {
       font-size: 24px;
       font-weight: $fw-regular;
       color: #BDBDBD;
    }
 }
+
 // / Hero styles
 
 // Product styles
-.product{
+.product {
    display: flex;
    align-items: flex-end;
    position: relative;
@@ -220,7 +245,7 @@ h3{
 
    background-color: #FF7235;
 
-   &__image{
+   &__image {
       position: relative;
       top: 4px;
 
@@ -228,23 +253,24 @@ h3{
    }
 }
 
-.product-blob-1{
+.product-blob-1 {
    position: absolute;
 
    bottom: 0;
    left: 0;
 }
 
-.product-blob-2{
+.product-blob-2 {
    position: absolute;
 
    top: 0;
    right: 0;
 }
+
 // / Product styles
 
 // Brands
-.brands-list{
+.brands-list {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -252,10 +278,103 @@ h3{
    height: 188px;
 
    &__item {
+      background-repeat: no-repeat;
+      background-position: center;
+
       transition: $transition;
    }
-   &__item:hover{
-      opacity: 0.5;
+}
+
+.brand-google {
+   width: 114px;
+   height: 40px;
+
+   background-image: url("../images/logo-google.svg");
+}
+
+.brand-cocacola {
+   width: 114px;
+   height: 40px;
+
+   background-image: url("../images/logo-cocacola.svg");
+}
+
+.brand-linkedin {
+   width: 132px;
+   height: 34px;
+
+   background-image: url("../images/logo-linkedin.svg");
+}
+
+.brand-samsung {
+   width: 161px;
+   height: 25px;
+
+   background-image: url("../images/logo-samsung.svg");
+}
+
+// / Brands
+
+// Features common styles
+
+.features {
+   padding-top: $base * 35;
+   padding-bottom: $base * 35;
+
+   .section-inner {
+      display: flex;
+      justify-content: space-between;
    }
 }
-// / Brands
+
+.features-content {
+   max-width: $base * 135;
+}
+
+.features-name {
+   margin-bottom: $base * 6;
+}
+
+.features-title {
+   margin-bottom: $base * 6;
+}
+
+.features-subtitle {
+   margin-bottom: $base * 6;
+}
+
+.features-btn {
+   &__link {
+      display: flex;
+      align-items: center;
+
+      font-size: $base * 6;
+      font-weight: $fw-regular;
+      line-height: 100%;
+      color: $accentColor;
+
+      transition: $transition;
+
+      &:hover {
+         color: darken($accentColor, 30%);
+      }
+
+      &:focus-visible {
+         @include focusVisible();
+      }
+   }
+
+   &__link-icon {
+      display: block;
+      width: $base * 4 + 2;
+      height: $base * 4;
+
+      margin-left: $base * 4;
+
+      background-image: url("../images/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+}
+
+// / Features common styles
