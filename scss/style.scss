@@ -203,7 +203,7 @@ h4 {
 
    cursor: pointer;
 
-   transition: color $transition, background-color $transition;
+   transition: color $transition, background-color $transition, stroke $transition;
 
    &:hover {
       color: $accentColor;
@@ -231,6 +231,10 @@ h4 {
       font-weight: $fw-regular;
       color: #BDBDBD;
    }
+}
+
+.hero-button:hover .hero-button__icon {
+   stroke: $accentColor;
 }
 
 // / Hero styles
@@ -378,3 +382,120 @@ h4 {
 }
 
 // / Features common styles
+
+// Product features styles
+.product-features {
+   padding-top: 139px;
+   padding-bottom: 139px;
+}
+
+.product-features-text {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   margin-bottom: 80px;
+}
+
+.product-features-title {
+   max-width: 700px;
+   margin-right: 30px;
+}
+
+.product-features-subtitle {
+   width: 350px;
+}
+
+.product-features-list {
+   display: flex;
+   justify-content: space-between;
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: 350px;
+      height: 350px;
+
+      border-radius: 12px;
+
+      transition: $transition;
+
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+
+      &:hover .product-features-name {
+         color: #FFF;
+      }
+
+      &:hover .product-features-description {
+         color: #FFF;
+      }
+
+      &-cross-platform:hover {
+         background-color: #FFBD74;
+      }
+
+      &-cloud-server:hover {
+         background-color: #E2598B;
+      }
+
+      &-pure-javascript:hover {
+         background-color: #4D12EE;
+      }
+
+      &-cross-platform:hover .product-features-icon {
+      }
+
+      &-cross-platform .product-features-icon {
+         background-image: url("../images/product-features-cross-platform.svg");
+      }
+
+      &-cloud-server .product-features-icon {
+         background-image: url("../images/product-features-cloud-server.svg");
+      }
+
+      &-pure-javascript .product-features-icon {
+         background-image: url("../images/product-features-pure-javascript.svg");
+      }
+   }
+}
+
+.product-features-icon {
+   width: 64px;
+   height: 64px;
+
+   margin-top: 63px;
+   margin-bottom: 24px;
+
+   border-radius: 50%;
+
+   background-color: #FFF;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.product-features-name {
+   margin-bottom: 12px;
+
+   font-weight: $fw-medium;
+   font-size: 30px;
+   line-height: 100%;
+
+   color: #292830;
+}
+
+.product-features-description {
+   max-width: 220px;
+
+   text-align: center;
+   font-weight: $fw-regular;
+   font-size: 14px;
+   line-height: 23px;
+
+   color: #BDBDBD;
+}
+
+// / Product features styles
