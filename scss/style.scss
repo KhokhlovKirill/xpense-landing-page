@@ -3,8 +3,6 @@
 // / Imports
 
 // Variables
-$base: 4px;
-
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-semibold: 600;
@@ -82,7 +80,7 @@ h4 {
 
    font-size: 24px;
    font-weight: $fw-regular;
-   line-height: $base * 9;
+   line-height: 36px;
    color: #BDBDBD;
 }
 
@@ -91,7 +89,7 @@ h4 {
 }
 
 .section-inner {
-   max-width: $base * 275;
+   max-width: 1100px;
 
    margin: 0 auto;
 }
@@ -104,8 +102,8 @@ h4 {
 
 // Header styles
 .header {
-   padding-top: $base * 13;
-   padding-bottom: $base * 26;
+   padding-top: 52px;
+   padding-bottom: 104px;
 
    .section-inner {
       display: flex;
@@ -120,7 +118,7 @@ h4 {
 
    &__item {
       &:not(:last-child) {
-         margin-right: $base * 10;
+         margin-right: 40px;
       }
    }
 
@@ -139,8 +137,8 @@ h4 {
 }
 
 .header-button {
-   width: $base * 40;
-   height: $base * 12;
+   width: 160px;
+   height: 48px;
 
    border: 1px solid $accentColor;
    border-radius: 8px;
@@ -162,7 +160,7 @@ h4 {
 
 // Hero styles
 .hero {
-   padding-bottom: $base * 53;
+   padding-bottom: 212px;
 
    .section-inner {
       display: flex;
@@ -172,11 +170,11 @@ h4 {
 }
 
 .hero-title {
-   margin-bottom: $base * 5;
+   margin-bottom: 20px;
 }
 
 .hero-subtitle {
-   margin-bottom: $base * 10;
+   margin-bottom: 40px;
 }
 
 .hero-buttons-block {
@@ -192,7 +190,7 @@ h4 {
    width: 225px;
    height: 75px;
 
-   margin-right: $base * 6;
+   margin-right: 24px;
 
    background-color: $accentColor;
    border-radius: 8px;
@@ -220,7 +218,7 @@ h4 {
       width: 18px;
       height: 10px;
 
-      margin-left: $base * 3;
+      margin-left: 12px;
 
       background-image: url("../images/arrow-down.svg");
       background-repeat: no-repeat;
@@ -245,7 +243,7 @@ h4 {
    align-items: flex-end;
    position: relative;
 
-   height: $base * 178;
+   height: 712px;
 
    background-color: #FF7235;
 
@@ -322,8 +320,8 @@ h4 {
 // Features common styles
 
 .features {
-   padding-top: $base * 35;
-   padding-bottom: $base * 35;
+   padding-top: 140px;
+   padding-bottom: 140px;
 
    .section-inner {
       display: flex;
@@ -332,19 +330,19 @@ h4 {
 }
 
 .features-content {
-   max-width: $base * 135;
+   max-width: 540px;
 }
 
 .features-name {
-   margin-bottom: $base * 6;
+   margin-bottom: 24px;
 }
 
 .features-title {
-   margin-bottom: $base * 6;
+   margin-bottom: 24px;
 }
 
 .features-subtitle {
-   margin-bottom: $base * 6;
+   margin-bottom: 24px;
 }
 
 .features-btn {
@@ -352,7 +350,7 @@ h4 {
       display: flex;
       align-items: center;
 
-      font-size: $base * 6;
+      font-size: 24px;
       font-weight: $fw-regular;
       line-height: 100%;
       color: $accentColor;
@@ -370,10 +368,10 @@ h4 {
 
    &__link-icon {
       display: block;
-      width: $base * 4 + 2;
-      height: $base * 4;
+      width: 18px;
+      height: 16px;
 
-      margin-left: $base * 4;
+      margin-left: 16px;
 
       background-image: url("../images/arrow-right.svg");
       background-repeat: no-repeat;
@@ -499,3 +497,150 @@ h4 {
 }
 
 // / Product features styles
+
+// Plans styles
+.plans {
+   padding-top: 124px;
+   padding-bottom: 124px;
+}
+
+.plans-title {
+   margin-bottom: 80px;
+
+   text-align: center;
+   font-size: 72px;
+   line-height: 52px;
+}
+
+.plans-list {
+   display: flex;
+   justify-content: space-between;
+
+   &__item {
+      width: 350px;
+
+      padding: 40px 0 60px 40px;
+
+      border-radius: 12px;
+   }
+}
+
+.plans-list__item-icon {
+   width: 20px;
+   height: 20px;
+
+   margin-bottom: 27px;
+
+   background-repeat: no-repeat;
+   background-position: center;
+
+   &__starter {
+      background-image: url("../images/plans-starter.svg");
+   }
+
+   &__silver {
+      background-image: url("../images/plans-silver.svg");
+   }
+
+   &__diamond {
+      background-image: url("../images/plans-diamond.svg");
+   }
+}
+
+.plans-list__item-name {
+   margin-bottom: 24px;
+
+   font-size: 32px;
+   font-weight: $fw-semibold;
+}
+
+.plans-list__item-features-list {
+   margin-bottom: 24px;
+
+   &__item {
+      font-size: 18px;
+      font-weight: $fw-regular;
+      line-height: 29px;
+
+      &:not(:last-child) {
+         margin-bottom: 8px;
+      }
+
+      &::before {
+         content: '';
+         display: inline-block;
+
+         width: 18px;
+         height: 14px;
+
+         margin-right: 11px;
+
+         background-image: url("../images/checkbox.svg");
+      }
+   }
+}
+
+.plans-list__item-price {
+   font-size: 24px;
+   font-weight: $fw-semibold;
+   line-height: 39px;
+
+   &-light-text {
+      font-size: 20px;
+      font-weight: $fw-regular;
+      color: #BDBDBD;
+   }
+}
+
+.plans-list__item-description {
+   margin-bottom: 40px;
+
+   font-size: 12px;
+   font-weight: $fw-regular;
+   color: #BDBDBD;
+}
+
+.plans-list__item-button {
+   padding: 12px 24px 12px 24px;
+
+   border: 1px solid $accentColor;
+   border-radius: 8px;
+
+   background-color: #FFF;
+
+   font-size: 16px;
+   font-weight: $fw-regular;
+   line-height: 26px;
+   color: $accentColor;
+
+   transition: $transition;
+   cursor: pointer;
+
+   &:focus-visible {
+      @include focusVisible();
+   }
+
+   &:hover {
+      background-color: $accentColor;
+      color: #FFF;
+
+      &::after {
+         background-image: url("../images/arrow-right-2-hover.svg");
+      }
+   }
+
+   &::after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 8px;
+
+      margin-left: 14px;
+
+      background-image: url("../images/arrow-right-2.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+}
+
+// / Plans styles
