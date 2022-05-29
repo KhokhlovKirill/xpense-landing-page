@@ -759,3 +759,120 @@ h4 {
 }
 
 // / Testimonials styles
+
+// Banner styles
+.banner {
+   position: relative;
+
+   padding-top: 120px;
+   padding-bottom: 93px;
+
+   background-color: #FF7235;
+}
+
+.banner-title {
+   position: relative;
+
+   margin-bottom: 24px;
+
+   font-weight: $fw-bold;
+   font-size: 72px;
+   line-height: 100%;
+   text-align: center;
+   color: #FFF;
+}
+
+.banner-subtitle {
+   position: relative;
+
+   margin-bottom: 60px;
+
+   font-weight: $fw-medium;
+   font-size: 36px;
+   line-height: 100%;
+   text-align: center;
+   color: #FFF;
+}
+
+.banner-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   position: relative;
+   z-index: 2;
+
+   left: 50%;
+   transform: translateX(-50%);
+
+   padding: 20px 28px 20px 24px;
+
+   margin-right: 24px;
+
+   background-color: #FFF;
+   border-radius: 8px;
+
+   font-size: 24px;
+   font-weight: $fw-regular;
+   color: $accentColor;
+
+   cursor: pointer;
+
+   transition: color $transition, background-color $transition, stroke $transition;
+
+   &:focus-visible {
+      outline: 3px solid #000;
+   }
+
+   &__icon {
+      display: block;
+      width: 18px;
+      height: 10px;
+
+      margin-left: 12px;
+
+      stroke: $accentColor;
+   }
+
+   &__text {
+      font-size: 24px;
+      font-weight: $fw-regular;
+      color: #BDBDBD;
+   }
+}
+
+.banner-images-block {
+   display: flex;
+   justify-content: space-between;
+
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+
+   margin-top: -60px;
+
+   width: 95vw;
+   max-width: 1285px;
+}
+
+.banner-image-left {
+   width: 455px;
+   height: 322px;
+
+   background-image: url("../images/banner-left-illustration.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.banner-image-right {
+   width: 455px;
+   height: 322px;
+
+   margin-right: 20px;
+
+   background-image: url("../images/banner-right-illustration.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+// / Banner styles
