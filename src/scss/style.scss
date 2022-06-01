@@ -407,12 +407,14 @@ h4 {
 // / Product styles
 
 // Brands
+.brands {
+   padding: 82px 66px;
+}
+
 .brands-list {
    display: flex;
    justify-content: space-between;
    align-items: center;
-
-   height: 188px;
 
    &__item {
       background-repeat: no-repeat;
@@ -448,6 +450,16 @@ h4 {
    height: 25px;
 
    background-image: url("../images/logo-samsung.svg");
+}
+
+@media (max-width: $width-lg) {
+   .brands-list {
+      flex-direction: column;
+
+      &__item:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
 }
 
 // / Brands
