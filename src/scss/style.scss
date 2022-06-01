@@ -595,7 +595,7 @@ h4 {
 }
 
 .product-features-subtitle {
-   width: 350px;
+   max-width: 350px;
 }
 
 .product-features-list {
@@ -675,6 +675,7 @@ h4 {
    font-weight: $fw-medium;
    font-size: 30px;
    line-height: 100%;
+   text-align: center;
 
    color: #292830;
 }
@@ -682,12 +683,86 @@ h4 {
 .product-features-description {
    max-width: 220px;
 
-   text-align: center;
    font-weight: $fw-regular;
    font-size: 14px;
    line-height: 23px;
+   text-align: center;
 
    color: #BDBDBD;
+}
+
+@media (max-width: $width-xl) {
+   .product-features-title {
+      font-size: 72px;
+   }
+
+   .product-features-subtitle {
+      font-size: 20px;
+   }
+}
+
+@media (max-width: $width-lg) {
+   .product-features-title {
+      max-width: 400px;
+      font-size: 64px;
+   }
+
+   .product-features-subtitle {
+      font-size: 18px;
+   }
+
+   .product-features-list__item {
+      height: 280px;
+   }
+
+   .product-features-name {
+      font-size: 24px;
+   }
+
+   .product-features-description {
+      padding: 0 20px;
+   }
+}
+
+@media (max-width: $width-md) {
+   .product-features-text {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+   }
+
+   .product-features-title {
+      margin-right: 0;
+      margin-bottom: 30px;
+
+      text-align: center;
+   }
+
+   .product-features-list {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .product-features-list__item {
+      width: 300px;
+
+      margin-bottom: 30px;
+
+      &:not(:last-child) {
+         margin-right: 0;
+      }
+   }
+}
+
+@media (max-width: $width-sm) {
+   .product-features-title {
+      font-size: 64px;
+   }
+
+   .product-features-subtitle {
+      font-size: 20px;
+      text-align: center;
+   }
 }
 
 // / Product features styles
