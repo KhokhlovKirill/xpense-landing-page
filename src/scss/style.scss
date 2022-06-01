@@ -526,6 +526,53 @@ h4 {
    }
 }
 
+@media (max-width: $width-lg) {
+   .features-title {
+      font-size: 72px;
+   }
+
+   .features-subtitle {
+      font-size: 20px;
+   }
+
+   .features-images {
+      width: 350px;
+   }
+}
+
+@media (max-width: $width-md) {
+   .features .section-inner {
+      flex-direction: column;
+      align-items: center;
+   }
+   .features-content * {
+      text-align: center;
+   }
+
+   .features-btn__link {
+      justify-content: center;
+   }
+
+   .features-images {
+      order: -1;
+      margin-bottom: 30px;
+   }
+}
+
+@media (max-width: $width-sm) {
+   .features-title {
+      font-size: 54px;
+   }
+
+   .features-subtitle {
+      font-size: 18px;
+   }
+
+   .features-images {
+      width: 300px;
+   }
+}
+
 // / Features common styles
 
 // Product features styles
