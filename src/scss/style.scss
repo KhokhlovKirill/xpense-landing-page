@@ -1236,6 +1236,10 @@ h4 {
    margin-bottom: 60px;
 }
 
+.footer-adaptive-logo {
+   display: none;
+}
+
 .footer-title {
    margin-bottom: 24px;
 
@@ -1284,9 +1288,14 @@ h4 {
    border-radius: 8px;
 }
 
+.footer-newsletter-form {
+   display: flex;
+   justify-content: space-between;
+}
+
 .footer-newsletter-input {
    padding-left: 23px;
-   padding-right: 23px;
+   padding-right: 5px;
 
    font-weight: $fw-regular;
    font-size: 18px;
@@ -1401,6 +1410,53 @@ h4 {
 
 .footer-social-network-linkedin {
    background-image: url("../images/linkedin-icon.svg");
+}
+
+@media (max-width: $width-lg) {
+   .footer-logo {
+      display: none;
+   }
+
+   .footer-adaptive-logo {
+      display: block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+
+      margin-bottom: 25px;
+   }
+}
+
+@media (max-width: $width-md) {
+   .footer-top {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .footer-links *, .footer-legal *, .footer-newsletter *:not(.footer-newsletter-input) {
+      text-align: center;
+   }
+
+   .footer-links, .footer-legal {
+      margin-bottom: 40px;
+   }
+}
+
+@media (max-width: $width-sm) {
+   .footer-bottom {
+      flex-direction: column;
+   }
+
+   .footer-newsletter-subtitle {
+      font-size: 18px;
+   }
+
+   .footer-newsletter-input {
+      width: 200px;
+   }
+
+   .footer-privacy-and-contact, .footer-copyright {
+      margin-bottom: 15px;
+   }
 }
 
 // / Footer styles
