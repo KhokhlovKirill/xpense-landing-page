@@ -1177,6 +1177,7 @@ h4 {
    background-image: url("../images/banner-left-illustration.svg");
    background-repeat: no-repeat;
    background-position: center;
+   background-size: contain;
 }
 
 .banner-image-right {
@@ -1188,6 +1189,35 @@ h4 {
    background-image: url("../images/banner-right-illustration.svg");
    background-repeat: no-repeat;
    background-position: center;
+   background-size: contain;
+}
+
+@media (max-width: $width-md) {
+   .banner-title {
+      font-size: 64px;
+   }
+
+   .banner-subtitle {
+      font-size: 30px;
+   }
+
+   .banner-images-block {
+      margin-top: -10px;
+   }
+}
+
+@media (max-width: $width-sm) {
+   .banner-title {
+      font-size: 42px;
+   }
+
+   .banner-subtitle {
+      font-size: 24px;
+   }
+
+   .banner-images-block {
+      display: none;
+   }
 }
 
 // / Banner styles
