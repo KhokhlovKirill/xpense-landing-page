@@ -971,6 +971,7 @@ h4 {
       height: 250px;
 
       padding: 28px;
+      margin-bottom: 24px;
 
       border-radius: 10px;
       border-top: 10px solid #FFBE21;
@@ -1052,6 +1053,23 @@ h4 {
 
    &:not(:last-child) {
       margin-right: 8px;
+   }
+}
+
+@media (max-width: $width-md) {
+   .testimonials-title {
+      font-size: 72px;
+   }
+}
+
+@media (max-width: $width-sm) {
+   .testimonials-title {
+      font-size: 60px;
+   }
+
+   .testimonials-list__item {
+      min-width: 300px;
+      width: 300px;
    }
 }
 
