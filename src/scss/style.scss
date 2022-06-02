@@ -778,7 +778,7 @@ h4 {
 
    text-align: center;
    font-size: 72px;
-   line-height: 52px;
+   line-height: 100%;
 }
 
 .plans-list {
@@ -909,6 +909,35 @@ h4 {
       background-image: url("../images/arrow-right-2.svg");
       background-repeat: no-repeat;
       background-position: center;
+   }
+}
+
+@media (max-width: $width-lg) {
+   .plans-title {
+      font-size: 54px;
+   }
+
+   .plans-list__item-name {
+      font-size: 26px;
+   }
+
+   .plans-list__item-features-list__item {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: $width-md) {
+   .plans-list {
+      flex-direction: column;
+      align-items: center;
+
+      &__item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         padding-left: 0;
+      }
    }
 }
 
